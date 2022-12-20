@@ -1,7 +1,7 @@
 module.exports = {
     // モード値を production に設定すると最適化された状態で、
     // development に設定するとソースマップ有効でJSファイルが出力される
-    mode: "development",
+    mode: process.env.NODE_ENV === "production" ? "production" : "development",
   
     // メインとなるJavaScriptファイル（エントリーポイント）
     entry: "./src/main.tsx",
